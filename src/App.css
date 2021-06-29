@@ -14,25 +14,91 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.Ingredient{
+  width: 150px;
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  margin: 20px;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.Ingredient:hover{
+  width: 180px;
+  height: 220px;
+}
+
+.steps{
+  overflow-y: scroll;
+position: relative;
+top: 30px;
+visibility: hidden;
+transition: 0.3s;
+opacity: 0;
+}
+
+.Ingredient img{
+  height: 80px;
+  width: 100px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.Ingredient p{
+  margin: 0;
+  font-size: 12px;
+}
+
+.Ingredient span{
+  font-size: 14px;
+}
+
+.Wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.Ingredient:hover .steps{
+  top: 0px;
+visibility: initial;
+opacity: 1;
+}
+
+.inputWrapper input{
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+border: none;
+box-shadow: 0 1px 4px 0 rgba(0,0,0,0.5);
+}
+
+.inputWrapper button{
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
 }
